@@ -1,0 +1,86 @@
+[2024-02-23 11:15:33] [ ERROR] [OdontólogoDaoH2:39] Columna "NUMERO_MATRÍCULA" no encontrada
+Column "NUMERO_MATRÍCULA" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (NOMBRE, APELLIDO, NUMERO_MATRÍCULA) VALUES(?, ?, ?) [42122-224]
+[2024-02-23 11:15:33] [ INFO ] [OdontólogoDaoH2:44] Hubo un error
+[2024-02-23 11:15:33] [ ERROR] [OdontólogoDaoH2:45] Columna "NUMERO_MATRÍCULA" no encontrada
+Column "NUMERO_MATRÍCULA" not found; SQL statement:
+INSERT INTO ODONTOLOGOS (NOMBRE, APELLIDO, NUMERO_MATRÍCULA) VALUES(?, ?, ?) [42122-224]
+[2024-02-23 11:18:06] [ ERROR] [OdontólogoDaoH2:39] Cannot invoke "com.backend.parcial.entity.Odontologo.getNombre()" because "odontologoObtenido" is null
+[2024-02-23 11:18:06] [ INFO ] [OdontólogoDaoH2:44] Hubo un error
+[2024-02-23 11:18:06] [ ERROR] [OdontólogoDaoH2:45] Cannot invoke "com.backend.parcial.entity.Odontologo.getNombre()" because "odontologoObtenido" is null
+[2024-02-23 11:27:20] [ ERROR] [OdontólogoDaoH2:39] Cannot invoke "com.backend.parcial.entity.Odontologo.getNombre()" because "odontologoObtenido" is null
+[2024-02-23 11:27:20] [ INFO ] [OdontólogoDaoH2:44] Hubo un error
+[2024-02-23 11:27:20] [ ERROR] [OdontólogoDaoH2:45] Cannot invoke "com.backend.parcial.entity.Odontologo.getNombre()" because "odontologoObtenido" is null
+[2024-02-23 11:42:23] [ ERROR] [OdontólogoDaoH2:43] Columna "id" no encontrada
+Column "id" not found [42122-224]
+[2024-02-23 11:42:23] [ INFO ] [OdontólogoDaoH2:48] Hubo un error
+[2024-02-23 11:42:23] [ ERROR] [OdontólogoDaoH2:49] Columna "id" no encontrada
+Column "id" not found [42122-224]
+[2024-02-23 11:43:08] [ ERROR] [OdontólogoDaoH2:43] Columna "idOdontologo" no encontrada
+Column "idOdontologo" not found [42122-224]
+[2024-02-23 11:43:08] [ INFO ] [OdontólogoDaoH2:48] Hubo un error
+[2024-02-23 11:43:08] [ ERROR] [OdontólogoDaoH2:49] Columna "idOdontologo" no encontrada
+Column "idOdontologo" not found [42122-224]
+[2024-02-23 11:44:36] [ ERROR] [OdontólogoDaoH2:43] Columna "idOdontologo" no encontrada
+Column "idOdontologo" not found [42122-224]
+[2024-02-23 11:44:36] [ INFO ] [OdontólogoDaoH2:48] Hubo un error
+[2024-02-23 11:44:36] [ ERROR] [OdontólogoDaoH2:49] Columna "idOdontologo" no encontrada
+Column "idOdontologo" not found [42122-224]
+[2024-02-23 11:46:07] [ ERROR] [OdontólogoDaoH2:44] Valor Invalido "0" para el parametro "parameterIndex"
+Invalid value "0" for parameter "parameterIndex" [90008-224]
+[2024-02-23 11:46:07] [ INFO ] [OdontólogoDaoH2:49] Hubo un error
+[2024-02-23 11:46:07] [ ERROR] [OdontólogoDaoH2:50] Valor Invalido "0" para el parametro "parameterIndex"
+Invalid value "0" for parameter "parameterIndex" [90008-224]
+[2024-02-23 11:46:59] [ ERROR] [OdontólogoDaoH2:43] Columna "idOdontologo" no encontrada
+Column "idOdontologo" not found [42122-224]
+[2024-02-23 11:46:59] [ INFO ] [OdontólogoDaoH2:48] Hubo un error
+[2024-02-23 11:46:59] [ ERROR] [OdontólogoDaoH2:49] Columna "idOdontologo" no encontrada
+Column "idOdontologo" not found [42122-224]
+[2024-02-23 11:54:23] [ ERROR] [OdontólogoDaoH2:43] Columna "id" no encontrada
+Column "id" not found [42122-224]
+[2024-02-23 11:54:23] [ INFO ] [OdontólogoDaoH2:48] Hubo un error
+[2024-02-23 11:54:23] [ ERROR] [OdontólogoDaoH2:49] Columna "id" no encontrada
+Column "id" not found [42122-224]
+[2024-02-23 11:58:44] [ ERROR] [OdontólogoDaoH2:43] Columna "id" no encontrada
+Column "id" not found [42122-224]
+[2024-02-23 11:58:44] [ INFO ] [OdontólogoDaoH2:48] Hubo un error
+[2024-02-23 11:58:44] [ ERROR] [OdontólogoDaoH2:49] Columna "id" no encontrada
+Column "id" not found [42122-224]
+[2024-02-23 12:00:52] [ ERROR] [OdontólogoDaoH2:43] Columna "id" no encontrada
+Column "id" not found [42122-224]
+[2024-02-23 12:00:52] [ INFO ] [OdontólogoDaoH2:48] Hubo un error
+[2024-02-23 12:00:52] [ ERROR] [OdontólogoDaoH2:49] Columna "id" no encontrada
+Column "id" not found [42122-224]
+[2024-02-23 12:01:12] [ ERROR] [OdontólogoDaoH2:43] Columna "id" no encontrada
+Column "id" not found [42122-224]
+[2024-02-23 12:01:12] [ INFO ] [OdontólogoDaoH2:48] Hubo un error
+[2024-02-23 12:01:12] [ ERROR] [OdontólogoDaoH2:49] Columna "id" no encontrada
+Column "id" not found [42122-224]
+[2024-02-23 12:03:43] [ INFO ] [OdontólogoDaoH2:40] Odontólogo guardado: com.backend.parcial.entity.Odontologo@4d6025c5
+[2024-02-23 12:07:14] [ INFO ] [OdontólogoDaoH2:40] Odontólogo guardado: NombreApellido
+[2024-02-23 12:07:47] [ INFO ] [OdontólogoDaoH2:40] Odontólogo guardado: JuanPerez
+[2024-02-23 12:17:30] [ INFO ] [OdontólogoDaoH2:83] Listado de todos los odontólogos: com.backend.parcial.entity.Odontologo@352ff4da
+[2024-02-23 12:19:22] [ INFO ] [OdontólogoDaoH2:83] Listado de todos los odontólogos: []
+[2024-02-23 12:26:03] [ INFO ] [OdontólogoDaoH2:82] Listado de todos los odontólogos: []
+[2024-02-23 12:30:55] [ INFO ] [OdontólogoDaoH2:82] Listado de todos los odontólogos: []
+[2024-02-23 12:34:52] [ INFO ] [OdontólogoDaoH2:82] Listado de todos los odontólogos: []
+[2024-02-23 12:40:44] [ INFO ] [OdontólogoDaoH2:82] Listado de todos los odontólogos: []
+[2024-02-23 12:40:44] [ INFO ] [OdontólogoDaoH2:40] Odontólogo guardado: com.backend.parcial.entity.Odontologo@57576994
+[2024-02-23 12:40:57] [ INFO ] [OdontólogoDaoH2:82] Listado de todos los odontólogos: []
+[2024-02-23 12:40:57] [ INFO ] [OdontólogoDaoH2:40] Odontólogo guardado: com.backend.parcial.entity.Odontologo@127a7a2e
+[2024-02-23 12:46:01] [ INFO ] [OdontólogoDaoH2:81] Listado de todos los odontólogos: []
+[2024-02-23 12:46:01] [ INFO ] [OdontólogoDaoH2:39] Odontólogo guardado: com.backend.parcial.entity.Odontologo@1187c9e8
+[2024-02-23 12:47:01] [ INFO ] [OdontólogoDaoH2:82] Listado de todos los odontólogos: []
+[2024-02-23 12:47:02] [ INFO ] [OdontólogoDaoH2:40] Odontólogo guardado: com.backend.parcial.entity.Odontologo@127a7a2e
+[2024-02-23 12:50:26] [ INFO ] [OdontólogoDaoH2:84] Listado de todos los odontólogos: []
+[2024-02-23 12:50:26] [ INFO ] [OdontólogoDaoH2:42] Odontólogo guardado: com.backend.parcial.entity.Odontologo@127a7a2e
+[2024-02-23 12:57:43] [ INFO ] [OdontólogoDaoH2:84] Listado de todos los odontólogos: []
+[2024-02-23 12:57:43] [ INFO ] [OdontólogoDaoH2:42] Odontólogo guardado: Id: 3 - Nombre: Juan - Apellido: Perez - Apellido: 2457
+[2024-02-23 13:03:12] [ INFO ] [OdontólogoDaoH2:86] Listado de todos los odontólogos: [Id: 0 - Nombre: Valeria - Apellido: Gonzalez - Apellido: 4829, Id: 0 - Nombre: Juan - Apellido: Gonzalez - Apellido: 2457]
+[2024-02-23 13:03:12] [ INFO ] [OdontólogoDaoH2:42] Odontólogo guardado: Id: 3 - Nombre: Juan - Apellido: Perez - Apellido: 2457
+[2024-02-23 13:11:31] [ INFO ] [OdontólogoDaoH2:85] Listado de todos los odontólogos: [Id: 0 - Nombre: Valeria - Apellido: Gonzalez - Apellido: 4829, Id: 0 - Nombre: Juan - Apellido: Gonzalez - Apellido: 2457, Id: 0 - Nombre: Juan - Apellido: Perez - Apellido: 2457]
+[2024-02-23 13:11:31] [ INFO ] [OdontólogoDaoH2:41] Odontólogo guardado: Id: 4 - Nombre: Juan - Apellido: Perez - Apellido: 2457
+[2024-02-23 13:11:40] [ INFO ] [OdontólogoDaoH2:85] Listado de todos los odontólogos: [Id: 0 - Nombre: Valeria - Apellido: Gonzalez - Apellido: 4829, Id: 0 - Nombre: Juan - Apellido: Gonzalez - Apellido: 2457, Id: 0 - Nombre: Juan - Apellido: Perez - Apellido: 2457, Id: 0 - Nombre: Juan - Apellido: Perez - Apellido: 2457]
+[2024-02-23 13:11:40] [ INFO ] [OdontólogoDaoH2:41] Odontólogo guardado: Id: 5 - Nombre: Juan - Apellido: Perez - Apellido: 2457
+[2024-02-23 13:12:57] [ INFO ] [OdontólogoDaoH2:85] Listado de todos los odontólogos: [Id: 0 - Nombre: Valeria - Apellido: Gonzalez - Apellido: 4829, Id: 0 - Nombre: Juan - Apellido: Gonzalez - Apellido: 2457]
+[2024-02-23 13:12:57] [ INFO ] [OdontólogoDaoH2:41] Odontólogo guardado: Id: 3 - Nombre: Juan - Apellido: Perez - Apellido: 2457
