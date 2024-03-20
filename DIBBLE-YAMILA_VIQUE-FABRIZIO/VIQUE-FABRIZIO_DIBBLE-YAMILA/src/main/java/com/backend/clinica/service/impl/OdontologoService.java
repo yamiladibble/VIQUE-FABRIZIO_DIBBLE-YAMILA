@@ -1,36 +1,47 @@
 package com.backend.clinica.service.impl;
 
-import com.backend.clinica.dao.IDao;
-import com.backend.clinica.dto.entrada.OdontologoEntradaDto;
-import com.backend.clinica.dto.salida.OdontologoSalidaDto;
 import com.backend.clinica.entity.Odontologo;
+import com.backend.clinica.repository.OdontologoRepository;
 import com.backend.clinica.service.IOdontologoService;
+import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
 public class OdontologoService implements IOdontologoService {
+    private final Logger LOGGER = LoggerFactory.getLogger(OdontologoService.class);
+    private OdontologoRepository odontologoRepository;
 
-    private IDao<Odontologo> odontologoIDao;
-    public OdontologoService(IDao<Odontologo> odontologoIDao){
-        this.odontologoIDao= odontologoIDao;
+
+    private ModelMapper modelMapper;
+
+    public OdontologoService(OdontologoRepository odontologoRepository, ModelMapper modelMapper) {
+        this.odontologoRepository = odontologoRepository;
+        this.modelMapper = modelMapper;
     }
+
+    public Odontologo registrarOdontologo(Odontologo odontologo) {
+        return odontologoRepository.save(odontologo);
+    }
+
+    public Odontologo buscarOdontologoPorId(Long id) {
+        return odontologoRepository.findById(id).orElse(null);
+    }
+
     @Override
-    public OdontologoSalidaDto registrarOdontologo(OdontologoEntradaDto odontologo) {
+    public void eliminarOdontologo(Long id) {
+
+    }
+
+    public List<Odontologo> listarOdontologos() {
+        return odontologoRepository.findAll();
+    }
+
+    @Override
+    public Odontologo actualizarOdontologo(Odontologo odontologo) {
         return null;
     }
 
-    @Override
-    public List<OdontologoSalidaDto> listarOdontologos() {
-        return null;
-    }
 
-    @Override
-    public OdontologoSalidaDto obtenerOdontologoPorId(int id) {
-        return null;
-    }
-
-    @Override
-    public OdontologoSalidaDto actualizarOdontologo(OdontologoEntradaDto odontologo) {
-        return null;
-    }
 }

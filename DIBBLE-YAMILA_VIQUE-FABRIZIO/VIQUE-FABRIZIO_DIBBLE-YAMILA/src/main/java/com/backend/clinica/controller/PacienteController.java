@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController //@ResponseBody + @Controller
@@ -26,7 +27,7 @@ public class PacienteController {
     }
 
     @GetMapping("/{id}") //localhost:8080/pacientes/x
-    public ResponseEntity<PacienteSalidaDto> buscarPacientePorId(@PathVariable int id){
+    public ResponseEntity<PacienteSalidaDto> buscarPacientePorId(@PathVariable Long id){
         return new ResponseEntity<>(pacienteService.buscarPacientePorId(id), HttpStatus.OK);
     }
 

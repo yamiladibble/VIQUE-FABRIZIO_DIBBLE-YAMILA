@@ -1,7 +1,7 @@
 package com.backend.clinica.dto.salida;
 
 public class OdontologoSalidaDto {
-    private int id;
+    private Long id;
     private String matricula;
     private String nombre;
     private String apellido;
@@ -9,18 +9,18 @@ public class OdontologoSalidaDto {
     public OdontologoSalidaDto() {
     }
 
-    public OdontologoSalidaDto(int id, String matricula, String nombre, String apellido) {
+    public OdontologoSalidaDto(Long id, String matricula, String nombre, String apellido) {
         this.id = id;
         this.matricula = matricula;
         this.nombre = nombre;
         this.apellido = apellido;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

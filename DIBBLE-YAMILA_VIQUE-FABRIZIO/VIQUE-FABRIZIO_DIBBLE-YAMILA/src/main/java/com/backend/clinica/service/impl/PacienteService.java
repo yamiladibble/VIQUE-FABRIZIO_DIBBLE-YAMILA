@@ -1,40 +1,48 @@
 package com.backend.clinica.service.impl;
 
-import com.backend.clinica.dao.IDao;
-import com.backend.clinica.dto.entrada.PacienteEntradaDto;
-import com.backend.clinica.dto.salida.PacienteSalidaDto;
-import com.backend.clinica.entity.Paciente;
-import com.backend.clinica.service.IPacienteService;
-import com.backend.clinica.utils.JsonPrinter;
+import com.backend.clinicaodontologica.dto.entrada.PacienteEntradaDto;
+import com.backend.clinicaodontologica.dto.salida.PacienteSalidaDto;
+import com.backend.clinicaodontologica.entity.Paciente;
+import com.backend.clinicaodontologica.repository.PacienteRepository;
+import com.backend.clinicaodontologica.service.IPacienteService;
+import com.backend.clinicaodontologica.utils.JsonPrinter;
+import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-
 public class PacienteService implements IPacienteService {
+
+
     private final Logger LOGGER = LoggerFactory.getLogger(PacienteService.class);
 
 
-    private IDao<Paciente> pacienteIDao;
+    private PacienteRepository pacienteRepository;
 
     private ModelMapper modelMapper;
 
 
-    public PacienteService(IDao<Paciente> pacienteIDao, ModelMapper modelMapper) {
-        this.pacienteIDao = pacienteIDao;
+    public PacienteService(PacienteRepository pacienteRepository, ModelMapper modelMapper) {
+        this.pacienteRepository = pacienteRepository;
         this.modelMapper = modelMapper;
         configureMapping();
     }
 
     @Override
     public PacienteSalidaDto registrarPaciente(PacienteEntradaDto paciente) {
+        //Logueamos lo que recibimos
         LOGGER.info("PacienteEntradaDto: {}", JsonPrinter.toString(paciente));
+        //convertimos mediante el mapper de dtoEntrada a entidad
         Paciente pacienteEntidad = modelMapper.map(paciente, Paciente.class);
-        Paciente pacienteEntidaConId = pacienteIDao.registrar(pacienteEntidad);
+        //mandamos a persistir a la capa dao y obtenemos una entidad con ID
+        Paciente pacienteEntidaConId = pacienteRepository.save(pacienteEntidad);
+        //transformamos la entidad obtenida en salidaDto
         PacienteSalidaDto pacienteSalidaDto = modelMapper.map(pacienteEntidaConId, PacienteSalidaDto.class);
+        //Logueamos lo que sale
         LOGGER.info("PacienteSalidaDto: {}",  JsonPrinter.toString(pacienteSalidaDto));
         return pacienteSalidaDto;
     }
@@ -42,7 +50,7 @@ public class PacienteService implements IPacienteService {
     @Override
     public List<PacienteSalidaDto> listarPacientes() {
 
-        List<PacienteSalidaDto> pacientesSalidaDto =  pacienteIDao.listarTodos()
+        List<PacienteSalidaDto> pacientesSalidaDto =  pacienteRepository.findAll()
                 .stream()
                 .map(paciente -> modelMapper.map(paciente, PacienteSalidaDto.class))
                 .toList();
@@ -59,9 +67,9 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public PacienteSalidaDto buscarPacientePorId(int id) {
+    public PacienteSalidaDto buscarPacientePorId(Long id) {
 
-        Paciente pacienteBuscado = pacienteIDao.buscarPorId(id);
+        Paciente pacienteBuscado = pacienteRepository.findById(id).orElse(null);
         PacienteSalidaDto pacienteEncontrado = null;
 
         if(pacienteBuscado != null){

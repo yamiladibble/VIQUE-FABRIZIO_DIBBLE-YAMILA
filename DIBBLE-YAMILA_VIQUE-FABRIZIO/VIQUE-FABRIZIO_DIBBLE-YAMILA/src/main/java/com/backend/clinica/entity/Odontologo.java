@@ -1,9 +1,7 @@
 package com.backend.clinica.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 
 @Entity
 @Table (name = "ODONTOLOGOS")
@@ -12,24 +10,24 @@ public class Odontologo {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
 
-    private Object GenerationType;
     private Long id;
+    @Column(length = 50)
+    private String matricula;
+    @Column(length = 50)
     private String nombre;
+    @Column(length = 50)
     private String apellido;
-    private int númeroDeMatrícula;
-
 
 
 
     public Odontologo() {
     }
 
-    public Odontologo(Object generationType, Long id, String nombre, String apellido, int númeroDeMatrícula) {
-        GenerationType = generationType;
+    public Odontologo(Long id, String matricula, String nombre, String apellido) {
         this.id = id;
+        this.matricula = matricula;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.númeroDeMatrícula = númeroDeMatrícula;
     }
 
 
@@ -39,6 +37,14 @@ public class Odontologo {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
     public String getNombre() {
@@ -55,14 +61,6 @@ public class Odontologo {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
-    }
-
-    public int getNúmeroDeMatrícula() {
-        return númeroDeMatrícula;
-    }
-
-    public void setNúmeroDeMatrícula(int númeroDeMatrícula) {
-        this.númeroDeMatrícula = númeroDeMatrícula;
     }
 
 

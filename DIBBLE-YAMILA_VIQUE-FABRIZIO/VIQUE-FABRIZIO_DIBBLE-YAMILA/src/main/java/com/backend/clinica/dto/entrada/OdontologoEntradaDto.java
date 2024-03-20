@@ -1,5 +1,4 @@
 package com.backend.clinica.dto.entrada;
-import org.jetbrains.annotations.NotNull;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
